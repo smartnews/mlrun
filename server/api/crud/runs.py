@@ -39,6 +39,20 @@ import server.api.utils.singletons.db
 from mlrun.utils import logger
 
 
+def reset_requested_logs(
+        db_session: sqlalchemy.orm.Session,
+        project: str,
+        uid: str,
+):
+    project = project or mlrun.mlconf.default_project
+    logger.debug(
+        "Resetting run requested log", project=project, uid=uid
+    )
+    server.api.utils.singletons.db.get_db().update_runs_requested_logs(
+        db_session, [uid], requested_logs=False
+    )
+
+
 class Runs(
     metaclass=mlrun.utils.singleton.Singleton,
 ):

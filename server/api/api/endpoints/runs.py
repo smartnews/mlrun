@@ -93,6 +93,7 @@ async def update_run(
     project: str,
     uid: str,
     iter: int = 0,
+    reset_requested_logs: bool = False,
     auth_info: mlrun.common.schemas.AuthInfo = Depends(deps.authenticate_request),
     db_session: Session = Depends(deps.get_db_session),
 ):
@@ -108,6 +109,14 @@ async def update_run(
         data = await request.json()
     except ValueError:
         log_and_raise(HTTPStatus.BAD_REQUEST.value, reason="bad JSON body")
+
+    if reset_requested_logs:
+        await run_in_threadpool(
+            server.api.crud.runs.reset_requested_logs,
+            db_session,
+            project,
+            uid,
+        )
 
     await run_in_threadpool(
         server.api.crud.Runs().update_run,
