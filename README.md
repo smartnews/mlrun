@@ -1,26 +1,9 @@
-<a id="top"></a>
-[![Build Status](https://github.com/mlrun/mlrun/actions/workflows/build.yaml/badge.svg?branch=development)](https://github.com/mlrun/mlrun/actions/workflows/build.yaml?query=branch%3Adevelopment)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![PyPI version fury.io](https://badge.fury.io/py/mlrun.svg)](https://pypi.python.org/pypi/mlrun/)
-[![Documentation](https://readthedocs.org/projects/mlrun/badge/?version=latest)](https://mlrun.readthedocs.io/en/latest/?badge=latest)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/mlrun/mlrun)
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/mlrun/mlrun?sort=semver)
-[![Join MLOps Live](https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&style=social)](https://mlopslive.slack.com)
+# Smartnews Notes
+- This is a forked version of MLRun, maintained to overwrite/develop features used for internal platform.
+- This should/will remain a minimal fork, therefore release versions could deviate from the official release.
+- All Smartnews branches should prefix with `sn/<>` for cleaner code attribution.
 
-<div>
-  <span>
-    <picture>
-      <img img align="left" src="./docs/_static/images/MLRun-logo.png" alt="MLRun logo" width="150"/>
-    </picture>
-  </span>
-  <span>
-    <picture>
-      <img img align="right" src="./docs/_static/images/maintenance_logo.svg" alt="Maintenance logo" width="250"/>
-    </picture>
-  </span>
-  <br clear="all"/>
-</div>
+---
 
 # Using MLRun 
 
