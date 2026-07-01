@@ -24,6 +24,8 @@ updates:
     open-pull-requests-limit: 6
 
   # custom actions
+    cooldown:
+      default-days: 7
   - package-ecosystem: github-actions
     directories:
       - ".github/actions/image-matrix-prep"
@@ -34,6 +36,8 @@ updates:
     open-pull-requests-limit: 6
 
   # go modules
+    cooldown:
+      default-days: 7
   - package-ecosystem: gomod
     directories:
       - "server/go/**/*"
@@ -50,6 +54,8 @@ updates:
           - 'sigs.k8s.io/*'
 
   # mlrun pipelines adapters
+    cooldown:
+      default-days: 7
   - package-ecosystem: pip
     directory: /
     schedule:
@@ -59,3 +65,5 @@ updates:
     commit-message:
       prefix: "[Dependabot-automated] "
     open-pull-requests-limit: 6
+    cooldown:
+      default-days: 7
